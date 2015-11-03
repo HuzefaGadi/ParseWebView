@@ -38,7 +38,7 @@ public class CustomReciever extends ParsePushBroadcastReceiver {
                     Log.d(TAG, "got action " + action);
 
                     if (action.equals("com.parse.push.intent.RECEIVE")) {
-                        String channel = intent.getExtras().getString("com.parse.Channel");
+                       // String channel = intent.getExtras().getString("com.parse.Channel");
                         JSONObject json = new JSONObject(intent.getExtras().getString("com.parse.Data"));
                         sendNotification(json.getString("message"), json.getString("link"), json.getString("title"));
 
